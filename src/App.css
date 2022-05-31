@@ -1,38 +1,183 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.homePageWrapper {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  color: #fff;
+  min-height: 100vh;
 }
 
-.App-link {
-  color: #61dafb;
+.formWrapper {
+  background: #282a36;
+  padding: 20px;
+  border-radius: 10px;
+  width: 400px;
+  max-width: 90%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+footer {
+  position: fixed;
+  bottom: 0;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.mainLabel {
+  margin-bottom: 20px;
+  margin-top: 0;
+}
+
+.homePageLogo {
+  height: 80px;
+  margin-bottom: 30px;
+}
+
+.inputBox {
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 16px;
+  background: #eee;
+  font-size: 12px;
+  font-weight: bold;
+  border: none;
+  outline: none;
+}
+
+.inputBox::placeholder {
+  font-size: 12px;
+}
+
+.btn {
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3 ease-in-out;
+}
+
+.joinBtn {
+  background: #55acee;
+  align-self: flex-end;
+  width: 100px;
+}
+
+.joinBtn:hover {
+  background: #407faf;
+}
+
+.createInfo {
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.createNewBtn {
+  color: #55acee;
+  text-decoration: none;
+  border-bottom: 1px solid #55acee;
+  transition: all 0.3 ease-in-out;
+}
+
+.createNewBtn:hover {
+  color: #407faf;
+}
+
+.mainWrap {
+  display: grid;
+  grid-template-columns: 230px 1fr;
+  height: 100vh;
+}
+
+.aside {
+  background: #1c1e29;
+  padding: 16px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.asideInner {
+  flex: 1;
+  overflow: auto;
+}
+
+.asideInner .logo {
+  border-bottom: 1px solid #424242;
+  padding-bottom: 10px;
+}
+.asideInner .logo img {
+  height: 60px;
+}
+
+.clientsList {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-height: calc(100vh - 80px - 80px - 32px - 32px - 53px);
+  overflow: hidden;
+}
+
+.clientsList:hover {
+  overflow: overlay;
+}
+.clientsList::-webkit-scrollbar {
+  opacity: 0;
+  width: 10px;
+}
+
+.clientsList::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.clientsList::-webkit-scrollbar-thumb {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background: rgba(68, 68, 68, 0.8);
+}
+
+.client {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.editorWrap {
+  background: #1c1e29;
+}
+
+.userName {
+  margin-top: 10px;
+}
+
+.leaveBtn,
+.copyBtn {
+  margin-top: 20px;
+  background: #55acee;
+  margin-left: auto;
+}
+.copyBtn {
+  margin-top: 20px;
+  width: 100%;
+  background: #fff;
+}
+
+.leaveBtn {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.leaveBtn:hover {
+  background: #407faf;
+}
+
+.cm-s-darcula.CodeMirror {
+  height: calc(100vh - 20px);
+  font-size: 20px;
+  line-height: 1.6;
+  padding-top: 20px;
 }
